@@ -81,6 +81,7 @@ function retrieveTweets () {
         if (!error) {
         	console.log('My 20 most recent tweets: ')
         	for (i = 0; i < 20; i++){
+        	console.log("");
             console.log(JSON.stringify((i+1) + ': ' + tweets[i].text, null, 4))
             console.log(JSON.stringify(tweets[i].created_at, null, 4));
         }
