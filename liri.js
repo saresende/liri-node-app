@@ -137,11 +137,31 @@ function doingIt () {
 			console.log(data);
 			var dataArr = data.split(",");
 			for (i = 0; i < dataArr.length; i++) {
+				movieName = movieName.replace("Mr. Nobody", dataArr[1]);
 				spotifyTrack = spotifyTrack.replace("the sign ace", dataArr[1]);
-				command = dataArr[0];
+				if (dataArr[0] = "spotify-this-song"){
+					spotifyCall();
+				}
+				else if (dataArr[0] = "movie-this"){
+					movieThis();
+				}
 
 			}
 			console.log(dataArr);
 		}
 	})
+}
+
+
+for (i = 2; i < nodeArgs.length; i++) {
+var logtext = ""
+logtext = logtext + " " + nodeArgs[i];
+fs.appendFile("log.text", (logtext) + ", ", function (err) {
+	if (err) {
+		console.log(err);
+	}
+	else {
+		console.log("Search logged.")
+	}
+})
 }
